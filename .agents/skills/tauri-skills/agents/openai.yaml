@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tauri Skills"
+  short_description: "Build secure production-grade Tauri applications"
+  default_prompt: "Use $tauri-skills to design, implement, or review this Tauri application."

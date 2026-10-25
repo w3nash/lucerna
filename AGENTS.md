@@ -23,3 +23,10 @@ Read `docs/README.md` inside that installed package first, then read the relevan
 
 This block is written and re-added by `turbo` before repository-scoped commands when an AI agent is detected. In the Turborepo source repository, its template is defined in `crates/turborepo-cli/src/cli/agent_guidance.rs`. Removing the managed block while updates are enabled means a later qualifying invocation will add it again. Set `"agentGuidance": true` in the root `turbo.json` or `turbo.jsonc` to opt in; this does not remove an existing block. Keep the block committed with your work to avoid an uncommitted change on the next agent invocation.
 <!-- END:turborepo-agent-rules -->
+
+## Project skills
+
+Project skills live in `.agents/skills/`. Read the skill's `SKILL.md` before starting matching work, then follow its workflow and the rule or reference files it points to.
+
+- `tauri-skills`: any work on the Tauri desktop app in `apps/desktop`. That covers `src-tauri/` config (`tauri.conf.*`), capabilities and permissions, plugins, IPC commands and events, the frontend's `@tauri-apps/*` calls, window and system features, mobile targets, and bundling, signing, updating, or distribution. Target Tauri v2; use v1 material only for migrations.
+- `rust-skills`: writing, reviewing, or refactoring Rust code, such as anything under `apps/desktop/src-tauri/src` or a `Cargo.toml`. For Rust inside the Tauri app, load both skills: `tauri-skills` for Tauri APIs and config, `rust-skills` for the Rust itself.
